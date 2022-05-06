@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body {
+  background-color: white;
+  font-family: montserrat;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+  position: fixed;
+  height: 73px;
+  width: 100%;
+}
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,
+a:hover {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (min-width: 858px) {
+  section {
+    margin-top: 45px;
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+   
+    padding: 20px;
+  }
+}
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  nav{
+    position:relative;
+  }
+  .left,.right,.center{
+    width:calc(100% - 40px) ;
+    margin: 20px;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+}
+
+section div {
+  width: 33%;
+  text-align: center;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.center div {
+  width: 100%;
+}
+.left,
+.right {
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.center{
+  padding: 20px;
+}
+p{
+  padding-top: 20px;
+}
+
+footer {
+  color: white;
+  background-color: black;
+
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer div {
+  width: 30%;
+  padding: 25px;
+}
+.end {
+  align-items: center;
+  padding-bottom: 10px;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  height: 45px;
+}
